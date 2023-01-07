@@ -1,0 +1,16 @@
+.header {
+    margin: 2rem;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:2rem;
+    //background: radial-gradient(circle,  rgb(175, 221, 240) 0%, rgb(129, 209, 239) 20%,rgb(62, 113, 163) 80%);  
+    
+    &__title{
+        font-size: xx-large;
+        color:blue;
+        border: 16px solid radial-gradient(circle,  rgb(175, 221, 240) 0%, rgb(129, 209, 239) 20%,rgb(62, 113, 163) 80%);
+    }
+
+}

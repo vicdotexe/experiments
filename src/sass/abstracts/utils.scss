@@ -1,0 +1,4 @@
+@mixin roundedBorder($radius: 0.25rem, $color: black){
+    border-radius: $radius;
+    border:0.125rem solid $color;
+}

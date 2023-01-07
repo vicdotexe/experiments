@@ -1,0 +1,10 @@
+@use 'reset';
+@use 'abstracts/variables';
+@use 'abstracts/utils';
+@use 'components/button.scss';
+@use 'global/colors';
+
+html{
+    background-color: rgb(16, 16, 16);
+    color: colors.$gray-300;
+}
