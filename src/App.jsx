@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Header from "./Components/Header";
 import Main from "./Components/Main";
 import Nav from "./Components/Nav";
@@ -81,35 +81,43 @@ const items = [
   }
 ]
 
-export default () => (
+export default function app() {
+  const [hue, setHue] = useState(109);
+  const [angle, setAngle] = useState(1);
+  return (
   <>
   {/* just a containting div to take up the whole screen and center the list of titlebars */}
-  <div style={{height:'50px'}}></div>
+  <div style={{height:'50px'}}>
+    <input type="range" min="1" max="360" value={hue} class="slider"  onChange={(e)=>setHue(e.target.value)}/>
+    <input type="range" min="1" max="40" value={angle} class="slider"  onChange={(e)=>{setAngle(e.target.value), console.log(angle)}}/>
+  </div>
   <div style={{display:'flex', justifyContent:'center', width:'100vw'}}>
     {/* <div style={{borderRight:'1px solid white', borderTop:'1px solid white', width:'10%'}}></div> */}
     <div style={{display:'flex', flexDirection:'column',justifyContent:'center', alignItems:'center', height:'100%', width:'80%'}}>
-      <Titlebar depth='20' thickness={20} style={{width:'100%'}}>
+      <Titlebar depth={parseInt(angle) + 20} thickness={20} hue={hue} style={{width:'100%'}} topcontent={<div style={{fontSize:'36px'}}>Welcome</div>}/>
         <div style={{display:'flex',  justifyContent:'space-between', alignItems:'start', width:'100%', height:'70vh', position:"relative"}}>
           
           
           <div style={{width:'80%', display:'flex', flexDirection:'column',alignSelf:'center', justifySelf:'space-between', margin:'0 3rem'}}>
             {titles.map((x,i)=>(
-              <Titlebar title={x} key={i} date={true} depth='10'>
+              <div>
+                <Titlebar key={i} date={true} depth={parseInt(angle) + 10} hue={hue}>{
+                  <h1 style={{fontSize:20, margin:6, textAlign:'center', width:'100%'}}>{x}</h1>
+                }</Titlebar>
                 <div style={{padding:'2rem'}}>Here is some random content for: {x}</div>
-              </Titlebar>
+              </div>
             ))}
           </div>
-          <Nav content={items} style={{width:'200px', marginRight:'0.75rem', height:'100%'}}/>
+          <Nav content={items} style={{width:'200px', marginRight:'0.75rem', height:`calc(100% + ${angle}px`}}/>
         </div>
-      </Titlebar>
       
       
       {/* a 400px div to contain all the titlebars */}
-      <Titlebar thickness={20} depth={40} style={{width:'100%', position:'relative', top:'-30px', zIndex:'-1'}}/>
+      <Titlebar thickness={20} depth={parseInt(angle) + 40} hue={hue} style={{width:'100%', position:'relative', top:'-30px', zIndex:'-1'}}/>
     </div>
     {/* <div style={{borderLeft:'1px solid white', borderTop:'1px solid white', width:'10%'}}></div> */}
   </div>
 
 
   </>
-);
+);}

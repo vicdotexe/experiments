@@ -1,68 +1,78 @@
-$dark: rgb(98, 32, 20);
-$light: rgb(168, 54, 34);
-$highlight: rgb(195, 63, 40);
+// $dark: rgb(98, 32, 20);
+// $light: rgb(168, 54, 34);
+// $highlight: rgb(195, 63, 40);
 
-$dark: rgb(20, 69, 98);
-$light: rgb(34, 108, 168);
-$highlight: rgb(40, 146, 195);
+// $dark: rgb(20, 69, 98);
+// $light: rgb(34, 108, 168);
+// $highlight: rgb(40, 146, 195);
 
-// $dark: rgb(97, 97, 97);
-// $light: rgb(167, 167, 167);
-// $highlight: rgb(192, 192, 192);
+// // $dark: rgb(97, 97, 97);
+// // $light: rgb(167, 167, 167);
+// // $highlight: rgb(192, 192, 192);
 
-$hhh: 10px;
+// $hhh: 10px;
 
-.depth-10{
-    height:10px;
-}
-.depth-20{
-    height:20px;
-}
-.pullout{
-    &__body{
-        clip-path: polygon(5% 0, 95% 0, 100% 100%, 0% 100%);
-        clip-path: polygon(5% 0, 95% 0, 100% 100%, 0% 100%);
-        background: linear-gradient(to top,$light, $dark,rgba(0, 0, 0, 0.342)  );
-        background-size: 200% 100%;
-        background-position: 50% 0%;
-        position: relative;
-    }
-    &__face{
-        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 4px 8px rgba(0, 0, 0, 0.418);
-        background:linear-gradient($light, $dark);
-        display: flex;
-        align-items: center;
-        position: relative;
-        z-index: 1;
-    }
-    &__divider{
-        border-left:1px solid black;
-        border-right:1px solid $light;
-        width:2px;
-        margin-top:-1px;
-        min-height: 100%;
-        height:100%;
-    }
-    h1{
-        display: inline;
-        margin-left: 0.5rem;
-        font-size: large;
-        text-align: center;
-        width:100%;
-    }
+// .depth-10{
+//     height:10px;
+// }
+// .depth-20{
+//     height:20px;
+// }
+// .pullout{
+//     overflow: visible;
+//     &__toptext{
+//         position:absolute;
+//         bottom:20%;
+//         left:50%;
+//         transform: translate(-50%,0);
+//     }
+//     &__bodycontainer{
+//         position: relative;
+//     }
+//     &__body{
+//         clip-path: polygon(5% 0, 95% 0, 100% 100%, 0% 100%);
+//         clip-path: polygon(5% 0, 95% 0, 100% 100%, 0% 100%);
+//         background: linear-gradient(to top,$light, $dark,rgba(0, 0, 0, 0.342)  );
+//         background-size: 200% 100%;
+//         background-position: 50% 0%;
+//         position: relative;
+//     }
+//     &__face{
+//         box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 4px 8px rgba(0, 0, 0, 0.418);
+//         background:linear-gradient($light, $dark);
+//         display: flex;
+//         align-items: center;
+//         position: relative;
+//         z-index: 1;
+//     }
+//     &__divider{
+//         border-left:1px solid black;
+//         border-right:1px solid $light;
+//         width:2px;
+//         margin-top:-1px;
+//         min-height: 100%;
+//         height:100%;
+//     }
+//     h1{
+//         display: inline;
+//         margin-left: 0.5rem;
+//         font-size: large;
+//         text-align: center;
+//         width:100%;
+//     }
 
-    &__inset{
-        margin:0.3rem;
-        padding: 0.2rem;
-        background: rgb(41, 39, 39);
-        outline: 1px solid rgba(255,255,255,0.1);
-        background-clip:border-box;
-        box-shadow: inset 1px 1px 4px rgba(0, 0, 0, 0.685);
-    }
+//     &__inset{
+//         margin:0.3rem;
+//         padding: 0.2rem;
+//         background: rgb(41, 39, 39);
+//         outline: 1px solid rgba(255,255,255,0.1);
+//         background-clip:border-box;
+//         box-shadow: inset 1px 1px 4px rgba(0, 0, 0, 0.685);
+//     }
 
-}
+// }
 
-.pullout:hover{
-    transform: perspective(200px) rotate;
-    transform-origin: 50% 0%;
-}
+// .pullout:hover{
+//     transform: perspective(200px) rotate;
+//     transform-origin: 50% 0%;
+// }
