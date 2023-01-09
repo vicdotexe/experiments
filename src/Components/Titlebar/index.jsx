@@ -36,7 +36,7 @@ const styles = {
     position:'absolute',
     bottom:'20%',
     left:'50%',
-    transform: 'translate(-50%,0)',
+    transform: 'translate(-50%,0)'
   },
   bodyContainer:{
     position: 'relative',
@@ -84,6 +84,7 @@ export default function Titlebar({children, style, depth, thickness,topcontent, 
         <div style={{height:`${depth}px`, ...styles.body, background: `linear-gradient(to top,hsla(${hue || 207}, 66%,40%,1), hsla(${hue || 207}, 69%,25%,1),rgba(0, 0, 0, 0.342))`}}>
         </div>
         <div style={styles.topcontent}>{topcontent}</div>
+        
         </div>
 
         <div style={{height:thickness ? thickness+'px' : '', ...styles.face,background:`linear-gradient(hsla(${hue || 207}, 66%,40%,1), hsla(${hue || 207}, 69%,25%,1))`}}> 
